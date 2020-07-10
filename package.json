@@ -9,7 +9,7 @@
     "component",
     "snippets"
   ],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "icon": "asset/vue.png",
   "engines": {
     "vscode": "^1.46.0"

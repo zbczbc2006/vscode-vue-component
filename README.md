@@ -1,7 +1,7 @@
 # vue-component
 
 ## 功能
-1. template中输入组件名称自动提示找到的组件（详见设置说明），选中后自动输入组件名（包含必填属性）、import语句、components属性（如果有需要）。 
+1. template中输入组件名称自动提示找到的组件（详见设置说明），选中后自动输入组件名（包含必填属性）、import语句、components属性（如果有需要）。  
    ![](https://raw.githubusercontent.com/zbczbc2006/vscode-vue-component/master/images/f1.gif)
 2. 鼠标移到组件标签名称时按`Ctrl`，点击标签名称可跳转到组件文件。  
    ![](https://raw.githubusercontent.com/zbczbc2006/vscode-vue-component/master/images/f2.gif)

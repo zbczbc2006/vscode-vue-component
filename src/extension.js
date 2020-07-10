@@ -104,6 +104,8 @@ async function activate (context) {
         let typeText = ''
         if (typeof prop === 'function') {
           typeText = `: ${prop.name}`
+        } else if (Array.isArray(prop)) {
+          typeText = `: ${prop.map(p => p.name).join()}`
         } else {
           const { required, type } = prop
           if (required) requiredText = '(required) '

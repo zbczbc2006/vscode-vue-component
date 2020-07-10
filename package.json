@@ -1,0 +1,72 @@
+{
+  "name": "vue-component",
+  "displayName": "vue-component",
+  "description": "Use vue components easily",
+  "publisher": "zhubincong",
+  "repository": "https://github.com/zbczbc2006/vscode-vue-component",
+  "keywords": [
+    "vue",
+    "component",
+    "snippets"
+  ],
+  "version": "1.0.0",
+  "icon": "asset/vue.png",
+  "engines": {
+    "vscode": "^1.46.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "activationEvents": [
+    "onLanguage:vue"
+  ],
+  "main": "./src/extension.js",
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "vue-component",
+      "properties": {
+        "vueComponent.aliases": {
+          "type": "object",
+          "default": {
+            "@/": "src/"
+          },
+          "description": "配置文件路径别名"
+        },
+        "vueComponent.exclude": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": "**/node_modules",
+          "description": "排除查找的vue文件路径"
+        }
+      }
+    }
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.1",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^13.11.0",
+    "@types/vscode": "^1.46.0",
+    "eslint": "^6.8.0",
+    "glob": "^7.1.6",
+    "mocha": "^7.1.2",
+    "typescript": "^3.8.3",
+    "vscode-test": "^1.3.0"
+  },
+  "dependencies": {
+    "acorn": "^7.3.1",
+    "acorn-jsx": "^5.2.0",
+    "escodegen": "^1.14.3",
+    "hash-sum": "^2.0.0",
+    "lru-cache": "^5.1.1",
+    "vue-template-compiler": "^2.6.11"
+  }
+}

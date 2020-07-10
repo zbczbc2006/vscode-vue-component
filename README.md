@@ -1,10 +1,15 @@
 # vue-component
 
 ## 功能
-1. template中输入组件名称自动提示找到的组件（详见设置说明），选中后自动输入组件名（包含必填属性）、import语句、components属性（如果有需要）。
-2. 鼠标移到组件标签名称时按`Ctrl`，点击标签名称可跳转到组件文件。
-3. 鼠标悬浮到组件标签，提示组件属性和事件。
-4. 标签内输入`p-`提示属性，输入`e-`提示事件，选中后自动输入。
+1. template中输入组件名称自动提示找到的组件（详见设置说明），选中后自动输入组件名（包含必填属性）、import语句、components属性（如果有需要）。 
+   ![](https://raw.githubusercontent.com/zbczbc2006/vscode-vue-component/master/images/f1.gif)
+2. 鼠标移到组件标签名称时按`Ctrl`，点击标签名称可跳转到组件文件。  
+   ![](https://raw.githubusercontent.com/zbczbc2006/vscode-vue-component/master/images/f2.gif)
+3. 鼠标悬浮到组件标签，提示组件属性和事件。  
+   ![](https://raw.githubusercontent.com/zbczbc2006/vscode-vue-component/master/images/f3.gif)
+4. 标签内输入`p-`提示属性，输入`e-`提示事件，选中后自动输入。  
+   ![](https://raw.githubusercontent.com/zbczbc2006/vscode-vue-component/master/images/f4.gif)
+   
 
 ## 设置
 + `vueComponent.aliases` 配置文件路径别名，默认值`{ "@/": "src/" }`，另外还会读取项目根目录下`jsconfig.json`里的别名，并且优先级更高。
@@ -19,10 +24,14 @@
 
 ### Translate by machine
 ## Features
-1. The component name entered in Template automatically prompts for the component found (see Settings), and automatically enters the component name (including required properties), import statement, and Components properties (if necessary) when selected.
-2. Moves  the mouse to the component label name and press `Ctrl`, then click the label name to jump to the component file.
-3. Hover the mouse over the component label, prompting for component properties and events.
-4. In the component label, input `p-` prompt property, input `e-` prompt event, and input automatically after selected.
+1. The component name entered in Template automatically prompts for the component found (see Settings), and automatically enters the component name (including required properties), import statement, and Components properties (if necessary) when selected.  
+   ![](https://raw.githubusercontent.com/zbczbc2006/vscode-vue-component/master/images/f1.gif)
+2. Moves  the mouse to the component label name and press `Ctrl`, then click the label name to jump to the component file.  
+   ![](https://raw.githubusercontent.com/zbczbc2006/vscode-vue-component/master/images/f2.gif)
+3. Hover the mouse over the component label, prompting for component properties and events.  
+   ![](https://raw.githubusercontent.com/zbczbc2006/vscode-vue-component/master/images/f3.gif)
+4. In the component label, input `p-` prompt property, input `e-` prompt event, and input automatically after selected.  
+   ![](https://raw.githubusercontent.com/zbczbc2006/vscode-vue-component/master/images/f4.gif)
 
 ## Settings
 + `vueComponent.aliases` configuration file path alias, default value is `{ "@/": "src/" }`, in addition to reading the alias in the root directory of the project `jsconfig.json`, and higher priority.

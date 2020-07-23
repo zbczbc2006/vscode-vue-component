@@ -21,8 +21,9 @@
 + 功能3、4依赖于当前组件和目标组件的components属性、import语句，不可有语法错误。
 + 自动输入的代码建议配合格式化工具使用。
 
+---
 
-### Translate by machine
+### Translated by machine
 ## Features
 1. The component name entered in Template automatically prompts for the component found (see Settings), and automatically enters the component name (including required properties), import statement, and Components properties (if necessary) when selected.  
    ![](https://raw.githubusercontent.com/zbczbc2006/vscode-vue-component/master/images/f1.gif)

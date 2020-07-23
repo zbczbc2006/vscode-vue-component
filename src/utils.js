@@ -34,7 +34,7 @@ function getComNameByPosition (document, position) {
   const customTagReg = /[A-Z-]/
   for (let line = position.line; line >= 0 && !match; line--) {
     lineText = document.lineAt(line).text
-    if (lineText.includes('>') && line !== position.line) return ''
+    if (lineText.trim().endsWith('>') && line !== position.line) return ''
     match = lineText.match(tagReg)
   }
   if (match) comName = match[1]

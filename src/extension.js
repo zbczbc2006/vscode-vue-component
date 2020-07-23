@@ -62,7 +62,6 @@ async function activate (context) {
   const componentsProvider = languages.registerCompletionItemProvider('vue', {
     async provideCompletionItems (document, position) {
       if (!isInTag(document, position, 'template') || getComNameByPosition(document, position)) return
-      console.log(snipsnapList)
       return snipsnapList.filter(snipsnap => {
         if (snipsnap.file === document.fileName) return false
         if (!snipsnap.detail) snipsnap.detail = getRelativePath(document.fileName, snipsnap.file)
@@ -76,7 +75,8 @@ async function activate (context) {
   */
   const linkProvider = languages.registerDefinitionProvider('vue', {
     provideDefinition (document, position) {
-      let comName = toPascalCase(document.getText(document.getWordRangeAtPosition(position, /[\w\-]+/)))
+      if (!isInTag(document, position, 'template')) return
+      const comName = toPascalCase(document.getText(document.getWordRangeAtPosition(position, /[\w\-]+/)))
       let file = parseDocument(document).components[comName]
       if (file) {
         if (!fs.existsSync(file)) {
@@ -135,7 +135,7 @@ async function activate (context) {
       })
       const eventSnipsnap = events.map(event => {
         const snipsnap = new CompletionItem(`e-${event}`, CompletionItemKind.Event)
-        snipsnap.insertText = new SnippetString(`@${toKebabCase(event)}="$0"`)
+        snipsnap.insertText = new SnippetString(`@${event}="$0"`)
         return snipsnap
       })
       return propsSnipsnap.concat(eventSnipsnap)

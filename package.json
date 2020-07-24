@@ -32,6 +32,15 @@
       "type": "object",
       "title": "vue-component",
       "properties": {
+        "vueComponent.style": {
+          "type": "string",
+          "default": "kebab-case",
+          "description": "Component tag autocomplete code style",
+          "enum": [
+            "kebab-case",
+            "PascalCase"
+          ]
+        },
         "vueComponent.aliases": {
           "type": "object",
           "default": {

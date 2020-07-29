@@ -149,7 +149,7 @@ async function activate (context) {
     const editor = window.activeTextEditor
     const document = editor.document
     const fileNamePascal = toPascalCase(fileName)
-    const tagName = vscode.workspace.getConfiguration('vueComponent').get('style') === 'kebab-case' ? toKebabCase(fileName) :toPascalCase(fileName)
+    const tagName = workspace.getConfiguration('vueComponent').get('tagNameStyle') === 'kebab-case' ? toKebabCase(fileName) : fileNamePascal
     // 先在光标处插入组件代码
     const { props } = parseFile(file)
     let tabStop = 1

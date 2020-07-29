@@ -33,10 +33,10 @@
       "type": "object",
       "title": "vue-component",
       "properties": {
-        "vueComponent.style": {
+        "vueComponent.tagNameStyle": {
           "type": "string",
-          "default": "kebab-case",
-          "description": "Component tag autocomplete code style",
+          "default": "PascalCase",
+          "description": "自动完成时组件标签命名方式",
           "enum": [
             "kebab-case",
             "PascalCase"

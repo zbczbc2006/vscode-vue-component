@@ -153,7 +153,7 @@ async function activate (context) {
     // 先在光标处插入组件代码
     const { props } = parseFile(file)
     let tabStop = 1
-    const requiredPropsSnippetStr = Object.keys(props).filter(prop => props[prop].required)
+    const requiredPropsSnippetStr = Object.keys(props || {}).filter(prop => (props[prop] || {}).required)
       .reduce((accumulator, prop) => accumulator += ` :${toKebabCase(prop)}="$${tabStop++}"`, '')
     const snippetString = `<${tagName}${requiredPropsSnippetStr}>$0</${tagName}>`;
     await editor.insertSnippet(new SnippetString(snippetString))

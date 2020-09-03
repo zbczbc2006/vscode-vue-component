@@ -59,7 +59,7 @@ function getRelativePath (from, to) {
 * @since 2020-07-06 19:38:35
 */
 function toPascalCase (str) {
-  return str.replace(/(^|-)([a-z])/g, (keb, s1, s2) => s2.toUpperCase())
+  return str.replace(/(^|-)(\w)/g, (keb, s1, s2) => s2.toUpperCase())
 }
 /**
 * 帕斯卡命名法转为短横线命名法
